@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src = "index.js" ></script>
+<p id="battery">100</p>
+<button id="on" onclick="ip.MStatus('on','battery')">on</button>
+<button id="send" onclick="ip.sendMessage('smess','input','battery','rmess1')">send</button>
+<input id="input" type="text">
+<p id="rmess">Hộp thư đến</p>
+<p id="smess">Thư đi</p>
+
+
+<p id="battery1">100</p>
+<button id="on1" onclick="nokia.MStatus('on1','battery1')">on</button>
+<button id="send1" onclick="nokia.sendMessage('smess1','input1','battery1','rmess')">send</button>
+<input id="input1" type="text">
+<p id="rmess1">Hộp thư đến</p>
+<p id="smess1">Thư đi</p>
+
+<script>
+let nokia = new Mobile(100,[],[],[]);
+let ip = new Mobile(200,[],[],[]);
+</script>
+</body>
+</html>
